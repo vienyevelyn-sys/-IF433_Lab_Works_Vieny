@@ -9,20 +9,17 @@ fun main(){
     //println("Nama:" + name + ", Nilai: "+ score)
     //print("Nama: $name, Nilai: $score")
 
-    //val grade = when(score){
-     //   in 90..100 -> "A"
-     //   in 80..89 -> "B"
-     //   in 70..79 -> "C"
-     //   else -> "D"
-    //}
-    //print("Grade kamu: $grade")
+    val grade = when(score){
+        in 90..100 -> "A"
+        in 80..89 -> "B"
+        in 70..79 -> "C"
+        else -> "D"
+    }
+    print("Grade kamu: $grade")
 
-    //println("status: ${calculateStatus(score)}")
+    println("status: ${calculateStatus(score)}")
 
-    val studentId: String? = null
-    val idLength: Int = studentId?.length ?: 0
 
-    println("Panjang ID: $idLength")
 
 
 }
