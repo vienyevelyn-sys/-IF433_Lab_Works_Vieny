@@ -10,7 +10,7 @@ fun main(args: Array<String>) {
     checkSize(area)
 }
 
-fun checkSize(area: Double) {
+fun checkSize(area) {
     if (area > 100) {
         println("This is a Big Circle")
     }
