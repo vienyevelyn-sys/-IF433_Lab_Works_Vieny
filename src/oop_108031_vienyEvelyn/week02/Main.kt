@@ -58,7 +58,40 @@ fun main(){
     val total_denda = loan.calculateFine()
     print("Denda yang dimiliki ${total_denda}")
 
+    println("\n--- APLIKASI GAME RPG  ---")
 
+    print("Masukkan Hero: ")
+    val hero = scanner.next()
+
+    print("Masukkan baseDamage: ")
+    val baseDamage = scanner.nextInt()
+
+    val hero1 = Hero(hero, baseDamage = baseDamage)
+    var enemyHp: Int = 100
+    while (hero1.isAlive() && enemyHp > 0){
+        println("Menu: 1. Serang, 2. Kabur")
+        var opsi = scanner.nextInt()
+        if (opsi == 1){
+            enemyHp -= hero1.baseDamage
+            if(enemyHp <= 0){
+                enemyHp = 0
+            }
+            println("Hp musuh tersisa ${enemyHp}")
+            if(enemyHp > 0){
+                hero1.takeDamage((10..20).random())
+            }
+            println("Sisa Hp ${hero1.name} ${hero1.hp}")
+        }
+        else if (opsi == 2){
+            break
+        }
+    }
+    if(hero1.hp < enemyHp){
+        println("Enemy menang")
+    }
+    else{
+        println("${hero1.name} menang")
+    }
 
 }
 
