@@ -57,6 +57,9 @@ fun main(){
     val loan = Loan(judul, peminjam, durasi)
     val total_denda = loan.calculateFine()
     print("Denda yang dimiliki ${total_denda}")
+
+
+
 }
 
 
