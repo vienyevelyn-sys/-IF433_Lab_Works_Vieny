@@ -42,6 +42,21 @@ fun main(){
 
     }
 
+    println("------ APLIKASI HITUND DENDA  ---")
+    print("Masukkan Judul: ")
+    val judul = scanner.nextLine()
+
+    print("Peminjam: ")
+    val peminjam = scanner.nextLine()
+
+    print("lama pinjaman: ")
+    var durasi: Int = scanner.nextInt()
+    if (durasi <= 0){
+        durasi = 1
+    }
+    val loan = Loan(judul, peminjam, durasi)
+    val total_denda = loan.calculateFine()
+    print("Denda yang dimiliki ${total_denda}")
 }
 
 
