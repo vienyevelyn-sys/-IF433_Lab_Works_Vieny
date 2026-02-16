@@ -16,9 +16,18 @@ fun main(){
 
     println("Pajak yang harus dibayar: ${e.tax}")
 
-//    val c = Weapon("budi")
-//    c.damage = -7
-//    println(c.damage)
-//    println(c.tier)
+
+    println("TUGAS MANDIRI 1")
+    println("---- Weapon 1 ----")
+    val w1 = Weapon("Pisau")
+    w1.damage = -50
+    println(w1.damage)
+    println(w1.tier)
+
+    println("---- Weapon 2 ----")
+    val w2 = Weapon("Panah")
+    w2.damage = 9999
+    println(w2.damage)
+    println(w2.tier)
 
 }
