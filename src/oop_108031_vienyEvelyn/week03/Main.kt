@@ -30,11 +30,13 @@ fun main(){
     println(w2.damage)
     println(w2.tier)
 
-//    println("TUGAS MANDIRI 2")
-//    val p1 = Player()
-//
-//    p1.addXp(50)
-//    p1.addXp(60)
-////    p1.xp
+    println("TUGAS MANDIRI 2")
+    val p1 = Player()
+
+    p1.addXp(50)
+    println("Level saat ini ${p1.level}")
+    p1.addXp(60)
+    println("Level saat ini ${p1.level}")
+//    p1.xp --> error jadi nggak ku comment ya
 
 }
