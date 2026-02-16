@@ -30,4 +30,11 @@ fun main(){
     println(w2.damage)
     println(w2.tier)
 
+//    println("TUGAS MANDIRI 2")
+//    val p1 = Player()
+//
+//    p1.addXp(50)
+//    p1.addXp(60)
+////    p1.xp
+
 }
