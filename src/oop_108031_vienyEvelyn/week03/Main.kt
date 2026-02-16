@@ -6,7 +6,7 @@ fun main(){
 //    e.salary = 5000
 
 //    Test validasi salary
-    e.salary = -1000
+//    e.salary = -1000
     e.salary = 5000000
     println("Gaji ${e.salary}")
 
