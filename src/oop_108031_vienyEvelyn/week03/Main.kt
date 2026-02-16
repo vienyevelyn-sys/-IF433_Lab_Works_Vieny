@@ -16,5 +16,9 @@ fun main(){
 
     println("Pajak yang harus dibayar: ${e.tax}")
 
+//    val c = Weapon("budi")
+//    c.damage = -7
+//    println(c.damage)
+//    println(c.tier)
 
 }
