@@ -19,4 +19,14 @@ fun main(){
     mycar2.honk()
     mycar2.openTrunk()
 
+    println("\n --- Manager ---")
+    val emp1 = Manager("Budiono", 5000)
+    emp1.work()
+    println("Salary ${emp1.calculateBonus()}")
+
+    println("\n --- Developer ---")
+    val emp2 = Developer("Anton", 5000, "Python")
+    emp2.work()
+    println("Salary ${emp2.calculateBonus()}")
+
 }
