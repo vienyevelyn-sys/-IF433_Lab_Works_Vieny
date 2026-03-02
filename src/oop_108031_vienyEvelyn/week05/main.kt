@@ -22,4 +22,21 @@ fun main(){
         println("-----------------------------------------")
     }
 
+//    TUGAS MANDIRI 1
+    println("\n TUGAS MANDIRI 1")
+    println("PERSGI -> SISI = 20")
+    val persegi = MathHelper()
+    var luas = persegi.hitungLuas(20)
+    println("Luas persegi: $luas")
+
+    println("PERSGI PANJANG-> PANJANG = 2, LEBAR = 10")
+    val persegi_panjang = MathHelper()
+    luas = persegi_panjang.hitungLuas(2, 10)
+    println("Luas persegi panjang: $luas")
+
+    println("LINGKARAN-> JARI-JARI = 14")
+    val lingkaran= MathHelper()
+    luas = persegi_panjang.hitungLuas(14)
+    println("Luas persegi panjang: $luas")
+    println("-----------------------------------------")
 }
