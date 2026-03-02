@@ -39,4 +39,13 @@ fun main(){
     luas = persegi_panjang.hitungLuas(14)
     println("Luas persegi panjang: $luas")
     println("-----------------------------------------")
+
+    println("\n TUGAS MANDIRI 2")
+    val akun1 = EWallet("budiono", 50000.0)
+    val akun2 = CreditCard("budiono", 100000.0)
+
+    val daftarAkun: List<PaymentMethod> = listOf(akun1, akun2)
+    for(akun in daftarAkun){
+        akun.processPayment(2000.0)
+    }
 }
