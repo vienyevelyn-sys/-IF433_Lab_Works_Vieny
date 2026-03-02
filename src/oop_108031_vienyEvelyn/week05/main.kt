@@ -42,10 +42,34 @@ fun main(){
 
     println("\n TUGAS MANDIRI 2")
     val akun1 = EWallet("budiono", 50000.0)
-    val akun2 = CreditCard("budiono", 100000.0)
+    val akun2 = CreditCard("Dudi", 100000.0)
 
     val daftarAkun: List<PaymentMethod> = listOf(akun1, akun2)
     for(akun in daftarAkun){
-        akun.processPayment(2000.0)
+
+        println("NAMA: ${akun.accountName}")
+        akun.processPayment(75000.0)
+        println("")
+        when(akun){
+            is EWallet ->{
+                println("--- EWALLET ---")
+                println("NAMA: ${akun.accountName}")
+                println("TOPUP")
+                akun.topUp(50000.0)
+                println("PAYMENT PROCESS")
+                akun.processPayment(75000.0)
+                println("----------------")
+            }
+            is CreditCard ->{
+                println("--- CREDIT CARD ---")
+                println("NAMA: ${akun.accountName}")
+                akun.processPayment(75000.0)
+                println("----------------")
+
+            }
+        }
+
+
+
     }
 }
