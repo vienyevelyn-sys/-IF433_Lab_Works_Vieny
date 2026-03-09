@@ -20,9 +20,16 @@ fun main() {
     processCheckout(method = pay2, amount = 150000.0)
 
 
+    println("\n=== TUGAS MANDIRI ===")
     val lampuPintar = SmartLamp ("1", "Ruang Tamu")
     val speakerPintar = SmartSpeaker ("2", "Google Nest Dapur")
     val cctvPintar = SmartCCTV ("3", "Ezviz Garasi")
 
+    val rumahPintar = SmartHomeHub()
+    rumahPintar.addDevice(lampuPintar)
+    rumahPintar.addDevice(speakerPintar)
+    rumahPintar.addDevice(cctvPintar)
 
+    rumahPintar.activateSecurityMode()
+    rumahPintar.turnOffAllSwitches()
 }

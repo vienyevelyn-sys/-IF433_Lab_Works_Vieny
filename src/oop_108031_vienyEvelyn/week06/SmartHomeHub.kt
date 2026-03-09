@@ -4,7 +4,8 @@ class SmartHomeHub(){
     val devices = mutableListOf<SmartDevice>()
 
     fun addDevice(device: SmartDevice){
-        println("Tambah device $device")
+        devices.add(device)
+        println("Tambah device ${device.name} ke SmartHome Hub")
     }
     fun turnOffAllSwitches(){
         for (device in devices){
