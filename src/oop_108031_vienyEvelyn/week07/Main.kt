@@ -38,4 +38,11 @@ fun main(){
         is ApiResponse.Error -> "Munculkan alert: ${response.message}"
         is ApiResponse.Loading -> "Tampilkan Spinner"
     }
+
+    println(uiMessage)
+
+    println("\n=== TEST CHECKPOINT 18 ===")
+    GameManager.startGame()
+    GameManager.startGame()
+
 }
