@@ -45,4 +45,13 @@ fun main(){
     GameManager.startGame()
     GameManager.startGame()
 
+    println("\n=== TEST CHECKPOINT 19 ===")
+    println("Drop Chance Legendary: ${ItemRarity.LEGENDARY.dropChance}")
+
+    val starterWeapon = Weapon.forgeStarterSword()
+    println("\nStarter Weapon:")
+    println("Nama Item: ${starterWeapon.item.name}")
+    println("Damage: ${starterWeapon.item.damage}")
+    println("Rarity: ${starterWeapon.item.rarity}")
+    println("Durability: ${starterWeapon.durability}")
 }
