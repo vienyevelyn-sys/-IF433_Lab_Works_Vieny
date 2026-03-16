@@ -54,4 +54,26 @@ fun main(){
     println("Damage: ${starterWeapon.item.damage}")
     println("Rarity: ${starterWeapon.item.rarity}")
     println("Durability: ${starterWeapon.durability}")
+
+    println("\n=== TEST CHECKPOINT 20 ===")
+    val upgradedItem = starterWeapon.item.copy(damage = 25)
+    println("Setelah upgrade di Blacksmith:")
+    println("Nama: ${upgradedItem.name}")
+    println("Damage: ${upgradedItem.damage}")
+    println("Rarity: ${upgradedItem.rarity}")
+
+    processEvent(BattleState.SafeZone)
+
+    processEvent(
+        BattleState.MonsterEncounter("Goblin Nakal")
+    )
+
+    processEvent(
+        BattleState.LootDropped(upgradedItem)
+    )
+
+    processEvent(
+        BattleState.GameOver("Terkena jebakan racun")
+    )
+
 }
