@@ -33,11 +33,13 @@ fun main(){
     worstPerformersString.forEach { println(it) }
 
     println("\n=== CHECKPOINT 17 ===")
-    tradeHistory.map{it.pair}
+    val uniquePairs = tradeHistory.map{it.pair}
         .toSet()
 
-    tradeHistory.forEach{println(it)}
+    uniquePairs.forEach{println(it)}
 
     println("\n=== CRYPTO TRADING DASHBOARD ===")
     topPerformersString.forEach { println(it) }
+    worstPerformersString.forEach { println(it) }
+    println(uniquePairs)
 }
