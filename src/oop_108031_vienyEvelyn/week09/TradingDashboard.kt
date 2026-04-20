@@ -9,13 +9,15 @@ fun main(){
         TradeLog("B", "Long", 25, 8.4, "CLOSED"),
         TradeLog("A", "Short", 10, -2.5, "CLOSED"),)
 
-    println("\n=== CHECKPOINT 11 ===")
+    println("\n=== CHECKPOINT 12 ===")
     val closedTrades = tradeHistory.filter{it.status == "CLOSED"}
     closedTrades.forEach { println(closedTrades) }
 
-    println("\n=== CHECKPOINT 12 ===")
+    println("\n=== CHECKPOINT 13 ===")
     val winningTrades = closedTrades.filter{it.roe > 0}
-    winningTrades.forEach { println(closedTrades) }
+    winningTrades.forEach { println(winningTrades) }
 
-
+    println("\n=== CHECKPOINT 14 ===")
+    val losingTrades = closedTrades.filter{it.roe <= 0}
+    losingTrades.forEach { println(losingTrades) }
 }
