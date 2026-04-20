@@ -38,4 +38,6 @@ fun main(){
 
     tradeHistory.forEach{println(it)}
 
+    println("\n=== CRYPTO TRADING DASHBOARD ===")
+    topPerformersString.forEach { println(it) }
 }
