@@ -32,4 +32,10 @@ fun main(){
         .map{"LOSS [${it.pair} - ${it.position}]: ${it.roe}% ROE (LEV: ${it.leverage}X)"}
     worstPerformersString.forEach { println(it) }
 
+    println("\n=== CHECKPOINT 17 ===")
+    tradeHistory.map{it.pair}
+        .toSet()
+
+    tradeHistory.forEach{println(it)}
+
 }
