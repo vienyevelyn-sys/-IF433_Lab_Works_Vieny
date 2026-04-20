@@ -20,4 +20,9 @@ fun main(){
     println("\n=== CHECKPOINT 14 ===")
     val losingTrades = closedTrades.filter{it.roe <= 0}
     losingTrades.forEach { println(losingTrades) }
+
+    println("\n=== CHECKPOINT 15 ===")
+    val topPerformersString = winningTrades.sortedByDescending { it.roe }
+        .map{"WIN [${it.pair} - ${it.position}]: +${it.roe} ROE (LEV: ${it.leverage}X)"}
+    topPerformersString.forEach { println(it) }
 }
