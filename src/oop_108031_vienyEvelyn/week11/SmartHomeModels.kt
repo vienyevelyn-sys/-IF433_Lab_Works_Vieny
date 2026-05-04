@@ -9,4 +9,3 @@ fun SmartDevice.diagnose(): String{
                 "Online" else "Offline"} " +
             "| Daya: $powerLoad Watt"
 }
-}
