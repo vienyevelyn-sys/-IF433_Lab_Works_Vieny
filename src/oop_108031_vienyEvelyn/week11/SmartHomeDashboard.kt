@@ -33,4 +33,10 @@ fun main(){
     searchResult?.let {
         println(it.diagnose())
     }
+
+    with(homeDevices){
+        println(homeDevices)
+        println(this.size)
+    }
+
 }
