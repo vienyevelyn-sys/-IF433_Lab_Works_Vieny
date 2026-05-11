@@ -31,4 +31,12 @@ fun main() {
     } finally {
         println("Siklus pengecekan dispenser pagi selesai.")
     }
+
+    println("\n=== JADWAL MAKAN SORE ===")
+    // Pemilik mengisi ulang stok menjadi 1000
+    currentKibbleStock = 1000
+
+    val feedingResult = runCatching {
+        dispenseKibble(30, currentKibbleStock, false)
+    }
 }
