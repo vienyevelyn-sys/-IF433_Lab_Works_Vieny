@@ -50,9 +50,11 @@ fun main(){
         TradeRecord(3, "SOLUSDT", "Long", 750.0, 89.3)
     )
 
-    val tes = saveTrades(trades, "crypto_trades.csv")
+    println(trades)
+    saveTrades(trades, "crypto_trades.csv")
 
     println("Data trade berhasil disimpan ke crypto_trades.csv")
+
     File("crypto_trades.csv").appendText("CORRUPT_ID,DOGEUSDT,Hold,XX,YY\n")
 
     println("Baris data korup berhasil ditambahkan")
@@ -63,4 +65,8 @@ fun main(){
     loadedTrades.forEach {
         println(it)
     }
+
+    val loadedData = loadTrades("crypto_trades.csv")
+    val sumLoad = loadedData.sumOf { it.pnl }
+    println(sumLoad)
 }
