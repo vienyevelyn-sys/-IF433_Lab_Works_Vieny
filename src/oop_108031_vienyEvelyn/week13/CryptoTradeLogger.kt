@@ -5,6 +5,22 @@ data class TradeRecord(val id: Int, val symbol: String, val type: String, val ma
 fun TradeRecord.toCsv(): String = "$id,$symbol,$margin,$pnl"
 
 fun fromCsvTrade(line: String): TradeRecord? {
-    val parts = line.split(",")
-    return TradeRecord(parts[0].toInt(), parts[1], parts[2], parts[3].toDouble(), parts[4].toDouble())
+
+    try{
+        val parts = line.split(",")
+        return TradeRecord(parts[0].toInt(), parts[1], parts[2], parts[3].toDouble(), parts[4].toDouble())
+    }catch (e: NumberFormatException){
+        println("(Log) Data korup diabaikan: $line")
+        println(e.message)
+    }
+    catch(e: IndexOutOfBoundsException){
+        println("(Log) Data korup diabaikan: $line")
+        println(e.message)
+    }
+    catch(e: Exception){
+        println("(Log) Data korup diabaikan: $line")
+        println(e.message)
+    }
+     return null
+
 }
