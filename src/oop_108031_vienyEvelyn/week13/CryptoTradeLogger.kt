@@ -53,4 +53,14 @@ fun main(){
     val tes = saveTrades(trades, "crypto_trades.csv")
 
     println("Data trade berhasil disimpan ke crypto_trades.csv")
+    File("crypto_trades.csv").appendText("CORRUPT_ID,DOGEUSDT,Hold,XX,YY\n")
+
+    println("Baris data korup berhasil ditambahkan")
+
+    val loadedTrades = loadTrades("crypto_trades.csv")
+
+    println("\nHasil load data valid:")
+    loadedTrades.forEach {
+        println(it)
+    }
 }
