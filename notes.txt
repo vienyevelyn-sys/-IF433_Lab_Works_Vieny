@@ -1,1 +1,2 @@
 Line 1: Insialisasi Sistem
+Line 2: Menambahan konfigurasi baru
